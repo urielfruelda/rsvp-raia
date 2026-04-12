@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSVP • Raia Brielle’s 1st Birthday</title>
+    <meta
+      name="description"
+      content="RSVP for our little girl's 1st birthday celebration."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="floral isWatermarked">
+    <div
+      class="wmOverlay"
+      aria-hidden="true"
+      data-wm="Raia Brielle • Private Invitation"
+    ></div>
+    <div class="floralBorderTop" aria-hidden="true"></div>
+    <div class="blossoms" aria-hidden="true">
+      <span class="blossom b01"></span>
+      <span class="blossom b02"></span>
+      <span class="blossom b03"></span>
+      <span class="blossom b04"></span>
+      <span class="blossom b05"></span>
+      <span class="blossom b06"></span>
+      <span class="blossom b07"></span>
+      <span class="blossom b08"></span>
+    </div>
+    <div class="twinkles" aria-hidden="true">
+      <span class="twinkle t01"></span>
+      <span class="twinkle t02"></span>
+      <span class="twinkle t03"></span>
+      <span class="twinkle t04"></span>
+      <span class="twinkle t05"></span>
+      <span class="twinkle t06"></span>
+      <span class="twinkle t07"></span>
+      <span class="twinkle t08"></span>
+      <span class="twinkle t09"></span>
+      <span class="twinkle t10"></span>
+      <span class="twinkle t11"></span>
+      <span class="twinkle t12"></span>
+    </div>
+    <div class="ssWarning" id="ssWarning" role="status" aria-live="polite">
+      <div class="ssWarningCard">
+        <div class="ssWarningTitle">Please don’t screenshot</div>
+        <div class="ssWarningText">
+          This invitation is private. Thank you for respecting our family’s privacy.
+        </div>
+      </div>
+    </div>
+
+    <div class="mobileNotice" id="mobileNotice" role="status" aria-live="polite">
+      <div class="mobileNoticeInner">
+        <div class="mobileNoticeText">
+          Private invite — please don’t take screenshots.
+        </div>
+        <button class="mobileNoticeBtn" type="button" id="mobileNoticeBtn" aria-label="Dismiss">
+          Dismiss
+        </button>
+      </div>
+    </div>
+    <div class="petals" aria-hidden="true">
+      <span class="petal p1"></span>
+      <span class="petal p2"></span>
+      <span class="petal p3"></span>
+      <span class="petal p4"></span>
+      <span class="petal p5"></span>
+      <span class="petal p6"></span>
+      <span class="petal p7"></span>
+      <span class="petal p8"></span>
+      <span class="petal p9"></span>
+      <span class="petal p10"></span>
+      <span class="petal p11"></span>
+      <span class="petal p12"></span>
+    </div>
+
+    <div class="monthIntro isActive" id="monthIntro" aria-live="polite">
+      <div class="monthIntroCard" role="status" aria-label="Loading">
+        <div class="monthIntroBadge">Raia’s 1st Birthday &amp; Dedication</div>
+        <div class="monthIntroPhotoWrap" aria-hidden="true">
+          <img
+            class="monthIntroPhoto"
+            id="monthPhoto"
+            src="./assets/month-01.jpg"
+            alt=""
+            loading="eager"
+          />
+          <img
+            class="monthIntroPhoto monthIntroPhotoNext"
+            id="monthPhotoNext"
+            src=""
+            alt=""
+            loading="eager"
+          />
+          <div class="monthIntroPhotoShimmer" id="monthPhotoShimmer"></div>
+        </div>
+        <div class="monthIntroMonth">
+          <span class="monthIntroNumber" id="monthNumber">1</span>
+          <span class="monthIntroLabel">month</span>
+        </div>
+        <div class="monthIntroLine" id="monthLine">Little moments, big love.</div>
+        <div class="monthIntroProgress" aria-hidden="true">
+          <div class="monthIntroBar" id="monthBar"></div>
+        </div>
+        <div class="monthIntroHint">Loading…</div>
+      </div>
+    </div>
+
+    <main class="page">
+      <header class="hero">
+        <div class="heroInvite">
+          <div class="heroArt" aria-label="Invitation header">
+            <div class="heroFloralOverlay" aria-hidden="true"></div>
+            <div class="heroButterfly b1" aria-hidden="true"></div>
+            <div class="heroButterfly b2" aria-hidden="true"></div>
+            <div class="heroButterfly b3" aria-hidden="true"></div>
+
+            <div class="heroArcText" aria-hidden="true">
+              Join us as we celebrate a very special milestone
+            </div>
+
+            <div class="heroName">
+              <div class="heroNameScript">Raia</div>
+              <div class="heroNameScript">Brielle’s</div>
+            </div>
+
+            <div class="heroOccasion">1st Birthday &amp; Dedication</div>
+
+            <div class="heroMeta">
+              <div class="heroMetaLine" id="eventDate">June 13, 2026</div>
+              <div class="heroMetaLine" id="eventTime">Time: 10:00 AM – 2:00 PM</div>
+              <div class="heroHeart" aria-hidden="true">♥</div>
+              <div class="heroMetaLine" id="eventLocation">
+                Maribelle's Garden &amp; Catering, Libjo, Batangas City
+              </div>
+            </div>
+
+            <div class="heroActions">
+              <a
+                class="button buttonGhost"
+                href="https://www.google.com/maps/search/?api=1&query=Maribelle%27s%20Garden%20%26%20Catering%2C%20Libjo%2C%20Batangas%20City"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View on Maps
+              </a>
+              <button class="button" type="button" id="rsvpJumpBtn">
+                Click to RSVP
+              </button>
+            </div>
+
+            <div class="heroBottomNotes" aria-label="Important notes">
+              <div class="heroBottomLine">
+                <strong>RSVP:</strong> Please accomplish by <strong>June 10, 2026</strong>.
+              </div>
+              <div class="heroBottomLine">
+                <strong>Dress code:</strong> Pastel color palette • Smart casual
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="photoCard isLoading" aria-label="Raia Brielle photo">
+          <div class="photoTop">
+            <span class="photoSparkle" aria-hidden="true">✦</span>
+            <span class="photoSparkle" aria-hidden="true">✦</span>
+            <span class="photoSparkle" aria-hidden="true">✦</span>
+          </div>
+          <div class="photoLoader" aria-hidden="true">
+            <div class="photoLoaderInner">
+              <div class="shimmer"></div>
+            </div>
+            <div class="photoLoaderText">Loading Raia’s monthly photos…</div>
+          </div>
+          <div class="heroMedia" aria-hidden="true">
+            <div class="heroSlideshow"></div>
+            <img
+              class="heroPhoto heroSlideA"
+              id="heroSlideA"
+              src="./assets/month-01.jpg"
+              alt="Raia Brielle month photo"
+              loading="eager"
+            />
+            <img
+              class="heroPhoto heroSlideB"
+              id="heroSlideB"
+              src=""
+              alt=""
+              loading="eager"
+            />
+          </div>
+          <div class="photoBody">
+            <p class="photoTitle">Raia Brielle’s 1st Birthday</p>
+          </div>
+
+          <div class="countdownCard countdownInPhoto" aria-label="Countdown to Raia's birthday">
+            <div class="countdownTime" id="countdownTime">--:--:--:--</div>
+            <div class="countdownLabels">
+              <span>Days</span>
+              <span>Hours</span>
+              <span>Minutes</span>
+              <span>Seconds</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="panel" aria-labelledby="eventDetailsTitle">
+        <div class="panelBody">
+          <div class="eventDetailsCard" aria-label="Event details card">
+            <div class="eventDetailsDate" id="eventDetailsDate">June 13, 2026</div>
+
+            <div class="eventSchedule" aria-label="Schedule">
+              <div class="eventScheduleItem">
+                <div class="eventScheduleTime">9:30 AM</div>
+                <div class="eventScheduleLabel">Call time at Maribelle’s Garden</div>
+              </div>
+              <div class="eventScheduleItem">
+                <div class="eventScheduleTime">10:00 AM</div>
+                <div class="eventScheduleLabel">Dedication</div>
+              </div>
+              <div class="eventScheduleItem">
+                <div class="eventScheduleTime">11:30 AM</div>
+                <div class="eventScheduleLabel">1st Birthday Celebration</div>
+              </div>
+              <div class="eventScheduleItem">
+                <div class="eventScheduleTime">12:00 PM</div>
+                <div class="eventScheduleLabel">Lunch / Games</div>
+              </div>
+            </div>
+
+            <div class="eventDetailsDay">Saturday</div>
+
+            <div class="eventVenue">
+              <div class="eventVenueMedia">
+                <div class="eventVenueImgs" aria-label="Venue photos">
+                  <img
+                    class="eventVenueImg"
+                    src="./assets/venue.png"
+                    alt="Venue photo 1"
+                    loading="lazy"
+                  />
+                  <img
+                    class="eventVenueImg"
+                    src="./assets/venue2.png"
+                    alt="Venue photo 2"
+                    loading="lazy"
+                  />
+                </div>
+                <a
+                  class="eventVenueCta"
+                  href="https://www.google.com/maps/search/?api=1&query=Maribelle%27s%20Garden%20%26%20Catering%2C%20Libjo%2C%20Batangas%20City"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View on Maps
+                </a>
+              </div>
+
+              <div class="eventVenueTitle">
+                Maribelle’s Garden &amp; Catering, Libjo, Batangas City
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="panel" aria-labelledby="dressCodeTitle">
+        <div class="panelBody">
+          <div class="dressCardCanva" aria-label="Dress code card">
+            <div class="dressCardInner">
+              <h3 class="dressScriptTitle">Dress Code</h3>
+              <div class="dressTag">SMART CASUAL</div>
+              <p class="dressText">
+                Strictly <strong>NO</strong> wearing of revealing outfits, shorts,
+                and slippers. Come dressed in soft pastel colors to match our
+                butterfly and floral theme.
+              </p>
+
+              <div class="dressScriptSub">Pastel Color Palette</div>
+              <div class="palette" aria-label="Pastel color palette">
+                <span class="paletteDot dot1" title="Buttercream"></span>
+                <span class="paletteDot dot2" title="Mint"></span>
+                <span class="paletteDot dot3" title="Baby Blue"></span>
+                <span class="paletteDot dot4" title="Lavender"></span>
+                <span class="paletteDot dot5" title="Blush Pink"></span>
+                <span class="paletteDot dot6" title="Peach"></span>
+              </div>
+
+              <div class="dressScriptSub">Sample Only</div>
+              <figure class="outfitFigure">
+                <img
+                  class="outfitImage"
+                  src="./assets/dresscode-sample.png"
+                  alt="Smart casual outfit samples (pastel theme)"
+                  loading="lazy"
+                />
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="panel" aria-labelledby="giftGuideTitle">
+        
+        <div class="panelBody">
+          <div class="giftCard">
+            <div class="giftCardTitle">Gift Guide</div>
+            <div class="giftCardText">
+              As love is what this day is all about, and with all that we have,
+              we are truly blessed. Your prayers and presence are all we request.
+              However, if you still wish to give, here are a few ideas we would
+              like to suggest.
+            </div>
+
+            <div class="giftRows" aria-label="Gift guide items">
+              <div class="giftRow">
+                <div class="giftEntry">
+                  <img class="giftIcon" src="./assets/diapers.png" alt="Hey Tiger Diaper Pants Large" loading="lazy" />
+                  <div class="giftLabel">Hey Tiger<br />Diaper Pants<br />(Large)</div>
+                </div>
+                <div class="giftEntry">
+                  <img class="giftIcon" src="./assets/montesorri.png" alt="Educational Montessori toys and story books" loading="lazy" />
+                  <div class="giftLabel">Educational<br />Montessori<br />Toys and<br />Story books</div>
+                </div>
+              </div>
+
+              <div class="giftRow">
+                <div class="giftEntry">
+                  <div class="giftIconPair" aria-label="Mustela products">
+                    <img class="giftIconSmall" src="./assets/mustela.png" alt="Mustela product 1" loading="lazy" />
+                    <img class="giftIconSmall" src="./assets/mustela2.png" alt="Mustela product 2" loading="lazy" />
+                  </div>
+                  <div class="giftLabel">Mustella<br />No rinse<br />cleansing water<br />or Mustella<br />Shampoo</div>
+                </div>
+                <div class="giftEntry">
+                  <img class="giftIcon" src="./assets/clothes-baby.png" alt="Clothes 1 year old" loading="lazy" />
+                  <div class="giftLabel">Clothes<br />1 year old</div>
+                </div>
+              </div>
+
+              <div class="giftRow">
+                <div class="giftEntry">
+                  <img class="giftIcon" src="./assets/eq-wipes.png" alt="EQ Baby wipes" loading="lazy" />
+                  <div class="giftLabel">EQ Baby<br />Wipes</div>
+                </div>
+                <div class="giftEntry">
+                  <img class="giftIcon" src="./assets/monetary.png" alt="Monetary gifts for Raia's future" loading="lazy" />
+                  <div class="giftLabel">Monetary<br />Gifts for<br />Raia’s Future</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="giftCardFooter">
+              Just because we gave ideas doesn’t mean you are obligated to give,
+              your presence is the most precious gift you can give.
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="panel" aria-labelledby="healthTitle">
+        <div class="panelBody">
+          <div class="healthCard" aria-label="Health protocol card">
+            <div class="healthTitle">Health Protocol</div>
+            <div class="healthSubtitle">
+              For Raia’s and everyone’s safety, let us strictly follow safety protocols.
+            </div>
+
+            <div class="healthItems" role="list">
+              <div class="healthItem" role="listitem">
+                <div class="healthIcon" aria-hidden="true">
+                  <img
+                    class="healthIconImg"
+                    src="./assets/protective-mask.png"
+                    alt=""
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </div>
+                <div class="healthText">Wear a facemask if you have a cold/cough.</div>
+              </div>
+
+              <div class="healthItem" role="listitem">
+                <div class="healthIcon" aria-hidden="true">
+                  <img
+                    class="healthIconImg"
+                    src="./assets/no.png"
+                    alt=""
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </div>
+                <div class="healthText">
+                  Refrain from kissing Raia <span class="healthNote">(she is a preemie baby)</span>.
+                </div>
+              </div>
+
+              <div class="healthItem" role="listitem">
+                <div class="healthIcon" aria-hidden="true">
+                  <img
+                    class="healthIconImg"
+                    src="./assets/quit-smoking.png"
+                    alt=""
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </div>
+                <div class="healthText">No smoking.</div>
+              </div>
+
+              <div class="healthItem" role="listitem">
+                <div class="healthIcon" aria-hidden="true">
+                  <img
+                    class="healthIconImg"
+                    src="./assets/hand-soap.png"
+                    alt=""
+                    loading="lazy"
+                    draggable="false"
+                  />
+                </div>
+                <div class="healthText">Sanitize your hands.</div>
+              </div>
+            </div>
+
+            <div class="healthFooter">
+              We aim to make our event <em>baby-friendly</em>, so we kindly ask for your understanding.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="panel" aria-labelledby="programTitle">
+        <div class="panelHeader programHeader">
+          <h2 class="panelTitle programTitle" id="programTitle">Program Flow</h2>
+          <p class="panelSubtitle programSubtitle">Kiddie birthday party program</p>
+        </div>
+        <div class="panelBody">
+          <ol class="timeline">
+            <li>Call to order • Opening prayer • Introduction of the host</li>
+            <li>Grand entrance of the celebrant and family</li>
+            <li>Welcome remarks from the parents</li>
+            <li>Well-wishes from the godparents (2 representatives)</li>
+            <li>Interactive game: “How well do you know our birthday star?”</li>
+            <li>Fun learning trivia for kids • Singing and dancing</li>
+            <li>Kiddie games • Candle-blowing ceremony</li>
+            <li>Lunch service (prayer before meals)</li>
+            <li>Table hopping / photo opportunity with the celebrant</li>
+            <li>Storytelling session with a short moral lesson</li>
+            <li>More kiddie games • Adult games</li>
+            <li>Bubbleman performance (“Inside the big bubble” photo session)</li>
+            <li>Distribution of party giveaways</li>
+          </ol>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="panel" aria-labelledby="rsvpTitle">
+        <div class="panelHeader">
+          <h2 class="panelTitle" id="rsvpTitle">RSVP</h2>
+          <p class="panelSubtitle">Please accomplish by June 10, 2026.</p>
+        </div>
+
+        <div class="panelBody">
+          <button class="button" type="button" id="rsvpOpenBtn">Open RSVP Form</button>
+          <p class="finePrint" style="text-align:center;margin-top:10px;">
+            The RSVP form will open in a private popup.
+          </p>
+        </div>
+      </section>
+
+      <div class="divider" aria-hidden="true"></div>
+
+      <section class="panel" aria-labelledby="noteTitle">
+        <div class="panelHeader">
+          <h2 class="panelTitle" id="noteTitle">A small request</h2>
+          <p class="panelSubtitle">Thank you for keeping this intimate</p>
+        </div>
+        <div class="panelBody">
+          <div class="callout calloutSoft">
+            <div class="calloutText">
+              We kindly ask that you treat this invitation with utmost
+              confidentiality. Raia’s first birthday celebration is reserved
+              only for our dearest and closest loved ones. Thank you for helping
+              us keep this gathering intimate and meaningful.
+            </div>
+            <div class="signature">With love, Sheree and Jason</div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="footerText">
+          Made with love for a very special little girl.
+        </p>
+      </footer>
+    </main>
+
+    <!-- Envelope animation + RSVP modal -->
+    <div class="rsvpEnvelope" id="rsvpEnvelope" aria-hidden="true">
+      <div class="rsvpEnvelopeCard" aria-hidden="true">
+        <div class="rsvpEnvBack"></div>
+        <div class="rsvpEnvLetter"></div>
+        <div class="rsvpEnvFront"></div>
+        <div class="rsvpEnvFlap"></div>
+      </div>
+      <div class="rsvpHearts" id="rsvpHearts" aria-hidden="true"></div>
+      <div class="rsvpEnvelopeText">Opening RSVP…</div>
+    </div>
+
+    <div class="modal" id="rsvpModal" role="dialog" aria-modal="true" aria-labelledby="rsvpModalTitle" aria-hidden="true">
+      <div class="modalBackdrop" data-close="true"></div>
+      <div class="modalCard" role="document">
+        <div class="modalTop">
+          <div class="modalTitle" id="rsvpModalTitle">RSVP</div>
+          <button class="modalClose" type="button" id="rsvpCloseBtn" aria-label="Close">×</button>
+        </div>
+
+        <form id="rsvpForm" class="form" novalidate>
+          <div class="grid2">
+            <label class="field">
+              <span class="fieldLabel">Guest name</span>
+              <input
+                name="guestName"
+                type="text"
+                autocomplete="name"
+                placeholder="e.g., Maria Lopez"
+                required
+                maxlength="80"
+              />
+              <span class="fieldHint">Required</span>
+            </label>
+
+            <label class="field">
+              <span class="fieldLabel">Will you attend?</span>
+              <select name="attending" required>
+                <option value="" selected disabled>Select one</option>
+                <option value="yes">Yes, we’ll be there</option>
+                <option value="no">Sorry, can’t make it</option>
+              </select>
+              <span class="fieldHint">Required</span>
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="fieldLabel">Guest names attending (including yourself)</span>
+            <textarea
+              name="guestAttendees"
+              placeholder="Type each guest name on a new line&#10;Example:&#10;Maria Lopez&#10;Jason De Luna&#10;Baby Raia"
+              maxlength="700"
+              rows="5"
+            ></textarea>
+            <span class="fieldHint">Required if attending “Yes”</span>
+          </label>
+
+          <label class="field">
+            <span class="fieldLabel">Phone or email (optional)</span>
+            <input
+              name="contact"
+              type="text"
+              autocomplete="email"
+              placeholder="So we can reach you if needed"
+              maxlength="120"
+            />
+          </label>
+
+          <label class="field">
+            <span class="fieldLabel">Message (optional)</span>
+            <textarea
+              name="message"
+              placeholder="Any notes? Allergies? A sweet message for the birthday girl?"
+              maxlength="500"
+              rows="4"
+            ></textarea>
+          </label>
+
+          <div class="actions">
+            <button class="button" type="submit" id="submitBtn">
+              Send RSVP
+            </button>
+            <p class="finePrint">
+              Your response will be saved to our guest list.
+            </p>
+          </div>
+
+          <div class="status" id="status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./config.js"></script>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
+
