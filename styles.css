@@ -182,6 +182,406 @@ body.modalOpen {
 }
 
 /* ============================================================
+   PHONE MOCKUP SECTION
+   ============================================================ */
+.phoneMockupSection {
+  position: fixed;
+  inset: 0;
+  z-index: 9997;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  background:
+    radial-gradient(1200px 900px at 30% 20%, rgba(255, 179, 214, 0.48), transparent 62%),
+    radial-gradient(900px 700px at 75% 75%, rgba(123, 97, 255, 0.2), transparent 64%),
+    linear-gradient(180deg, #fff6fb, #ffffff 70%);
+  overflow-y: auto;
+}
+
+.phoneMockupSection.isActive {
+  display: grid;
+}
+
+.phoneMockupContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .phoneMockupContainer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.phoneDevice {
+  position: relative;
+  width: 280px;
+  height: 570px;
+  margin: 0 auto;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #2c2c2e 0%, #1c1c1e 100%);
+  box-shadow: 
+    0 40px 100px rgba(0, 0, 0, 0.3),
+    0 0 0 12px rgba(255, 255, 255, 0.05),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  padding: 14px;
+  animation: phoneFloat 3s ease-in-out infinite;
+}
+
+.iphoneDevice {
+  animation-delay: 0s;
+}
+
+.androidDevice {
+  animation-delay: 1.5s;
+}
+
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.phoneNotch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 28px;
+  background: #000;
+  border-radius: 0 0 20px 20px;
+  z-index: 10;
+}
+
+.phoneCamera {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  border: 2px solid #2c2c2e;
+  z-index: 10;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+.phoneScreen {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+}
+
+.phoneScreenshot {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.phoneLabel {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Fraunces, Georgia, serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(28, 20, 38, 0.75);
+  letter-spacing: 0.05em;
+}
+
+.phoneMockupClose {
+  border: none;
+  border-radius: 999px;
+  padding: 16px 32px;
+  font-weight: 800;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(105deg, rgba(240, 123, 176, 0.95), rgba(123, 97, 255, 0.88));
+  box-shadow:
+    0 14px 36px rgba(240, 123, 176, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.25) inset;
+  transition: all 200ms ease;
+}
+
+.phoneMockupClose:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 20px 50px rgba(240, 123, 176, 0.34),
+    0 0 0 1px rgba(255, 255, 255, 0.25) inset;
+}
+
+/* ============================================================
+   MONTH 12 SPECIAL ANIMATION
+   ============================================================ */
+.month12Animation {
+  position: absolute;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: linear-gradient(135deg, 
+    rgba(255, 179, 214, 0.15) 0%, 
+    rgba(220, 207, 246, 0.12) 50%, 
+    rgba(143, 230, 187, 0.1) 100%);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.month12Animation.isActive {
+  display: grid;
+  animation: month12FadeIn 600ms ease forwards;
+}
+
+@keyframes month12FadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.month12Confetti {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.confettiPiece {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  animation: confettiFall var(--fallDuration, 3s) linear forwards;
+}
+
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(500px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.month12Balloons {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -100px;
+  font-size: 48px;
+  animation: balloonFloat var(--floatDuration, 5s) ease-in-out forwards;
+}
+
+@keyframes balloonFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-650px) translateX(var(--driftX, 50px));
+    opacity: 0;
+  }
+}
+
+.month12Content {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  animation: month12ContentZoom 800ms cubic-bezier(0.2, 0.9, 0.2, 1) forwards;
+}
+
+@keyframes month12ContentZoom {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.month12BigNumber {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 140px;
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #f07bb0, #7b61ff, #3aa86b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 20px 60px rgba(240, 123, 176, 0.3);
+  animation: month12NumberPulse 2s ease-in-out infinite;
+}
+
+@keyframes month12NumberPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.month12Title {
+  margin-top: 10px;
+  font-family: Fraunces, Georgia, serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: rgba(168, 40, 64, 0.9);
+  letter-spacing: -0.02em;
+}
+
+.month12Name {
+  margin-top: 8px;
+  font-family: "Great Vibes", Georgia, serif;
+  font-size: 52px;
+  color: rgba(240, 123, 176, 0.95);
+  text-shadow: 0 10px 30px rgba(240, 123, 176, 0.2);
+}
+
+.month12Hearts {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  font-size: 32px;
+}
+
+.month12Hearts span {
+  display: inline-block;
+  animation: heartBounce 1.5s ease-in-out infinite;
+}
+
+.month12Hearts span:nth-child(1) { animation-delay: 0s; }
+.month12Hearts span:nth-child(2) { animation-delay: 0.2s; }
+.month12Hearts span:nth-child(3) { animation-delay: 0.4s; }
+.month12Hearts span:nth-child(4) { animation-delay: 0.6s; }
+.month12Hearts span:nth-child(5) { animation-delay: 0.8s; }
+
+@keyframes heartBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.2); }
+}
+
+/* Hide photo elements when month 12 is active */
+.monthIntroPhotoWrap.isMonth12 .monthIntroPhoto,
+.monthIntroPhotoWrap.isMonth12 .monthIntroPhotoNext,
+.monthIntroPhotoWrap.isMonth12 .monthIntroPhotoShimmer {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+.specialRequestPanel {
+  position: relative;
+}
+
+.specialRequestCard {
+  position: relative;
+  overflow: hidden;
+  padding: 50px 35px;
+  border-radius: 32px;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.96) 0%,
+    rgba(255,248,250,0.96) 100%
+  );
+  border: 1px solid rgba(255, 192, 203, 0.25);
+  box-shadow:
+    0 15px 40px rgba(255, 182, 193, 0.15),
+    0 4px 15px rgba(0,0,0,0.04);
+  backdrop-filter: blur(10px);
+}
+
+.specialGlow {
+  position: absolute;
+  inset: -100px;
+  background:
+    radial-gradient(circle at top right,
+    rgba(255,192,203,0.18),
+    transparent 40%);
+  pointer-events: none;
+}
+
+.specialIcon {
+  font-size: 42px;
+  margin-bottom: 12px;
+  animation: floaty 4s ease-in-out infinite;
+}
+
+.specialTitle {
+  font-family: "Fraunces", serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #7a4f5f;
+  margin-bottom: 10px;
+}
+
+.specialSubtitle {
+  color: #9a6b7c;
+  font-size: 1rem;
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.specialDivider {
+  width: 80px;
+  height: 2px;
+  margin: 0 auto 28px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    #f8c8dc,
+    #eab8ff,
+    #f8c8dc
+  );
+}
+
+.specialMessage {
+  color: #5f4b53;
+  line-height: 1.9;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 18px;
+}
+
+.specialSignature {
+  margin-top: 35px;
+  color: #8a6170;
+  font-family: "Great Vibes", cursive;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.specialSignature span {
+  font-size: 2.4rem;
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+/* ============================================================
    MODAL — Compact, no-scroll redesign
    ============================================================ */
 .modal {
@@ -2376,4 +2776,7 @@ textarea:focus {
   .field { animation: none; opacity: 1; transform: none; }
   .modalCard { animation: none; opacity: 1; transform: none; }
   .rsvpEnvBack, .rsvpEnvLetter, .rsvpEnvFront, .rsvpEnvFlap { animation: none; opacity: 1; transform: none; }
-}
+  .phoneDevice { animation: none; }
+  .month12BigNumber { animation: none; }
+  .month12Hearts span { animation: none; }
+} 

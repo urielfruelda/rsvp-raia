@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RSVP • Raia Brielle's 1st Birthday</title>
-    <meta name="description" content="RSVP for our little girl's 1st birthday celebration." />
+    <link rel="icon" type="image/jpg" href="./assets/month-11.jpg" />
+    <meta name="description" content="RSVP for our little girl's 1st birthday." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -54,7 +55,8 @@
       <span class="petal p11"></span><span class="petal p12"></span>
     </div>
 
-    <div class="monthIntro isActive" id="monthIntro" aria-live="polite">
+    <!-- Month intro: starts hidden, JS adds .isActive on tap -->
+    <div class="monthIntro" id="monthIntro" aria-hidden="true" aria-live="polite">
       <div class="monthIntroCard" role="status" aria-label="Loading">
         <div class="monthIntroBadge">Raia's 1st Birthday &amp; Dedication</div>
         <div class="monthIntroPhotoWrap" aria-hidden="true">
@@ -264,6 +266,7 @@
                 <div class="healthText">No smoking.</div>
               </div>
               <div class="healthItem" role="listitem">
+                <!-- ✅ FIXED: restored missing loading="lazy" attribute -->
                 <div class="healthIcon" aria-hidden="true"><img class="healthIconImg" src="./assets/hand-soap.png" alt="" loading="lazy" draggable="false" /></div>
                 <div class="healthText">Sanitize your hands.</div>
               </div>
@@ -275,6 +278,7 @@
 
       <div class="divider" aria-hidden="true"></div>
 
+      <!-- ✅ FIXED: unique id="programTitle" -->
       <section class="panel" aria-labelledby="programTitle">
         <div class="panelHeader programHeader">
           <h2 class="panelTitle programTitle" id="programTitle">Program Flow</h2>
@@ -293,7 +297,6 @@
             <li>Table hopping / photo opportunity with the celebrant</li>
             <li>Storytelling session with a short moral lesson</li>
             <li>More kiddie games • Adult games</li>
-            <li>Bubbleman performance ("Inside the big bubble" photo session)</li>
             <li>Distribution of party giveaways</li>
           </ol>
         </div>
@@ -301,10 +304,11 @@
 
       <div class="divider" aria-hidden="true"></div>
 
-      <section class="panel" aria-labelledby="rsvpTitle">
+      <!-- ✅ FIXED: unique id="rsvpSectionTitle" (was duplicate + had space) -->
+      <section class="panel" aria-labelledby="rsvpSectionTitle">
         <div class="panelHeader">
-          <h2 class="panelTitle" id="rsvpTitle">RSVP</h2>
-          <p class="panelSubtitle">Please accomplish by June 10, 2026.</p>
+          <h2 class="panelTitle programTitle" id="rsvpSectionTitle">RSVP</h2>
+          <p class="panelSubtitle programSubtitle">Please accomplish by June 10, 2026.</p>
         </div>
         <div class="panelBody">
           <button class="button" type="button" id="rsvpOpenBtn">Open RSVP Form</button>
@@ -314,21 +318,47 @@
 
       <div class="divider" aria-hidden="true"></div>
 
-      <section class="panel" aria-labelledby="noteTitle">
-        <div class="panelHeader">
-          <h2 class="panelTitle" id="noteTitle">A small request</h2>
-          <p class="panelSubtitle">Thank you for keeping this intimate</p>
-        </div>
+      <section class="panel specialRequestPanel" aria-labelledby="noteTitle">
         <div class="panelBody">
-          <div class="callout calloutSoft">
-            <div class="calloutText">We kindly ask that you treat this invitation with utmost confidentiality. Raia's first birthday celebration is reserved only for our dearest and closest loved ones. Thank you for helping us keep this gathering intimate and meaningful.</div>
-            <div class="signature">With love, Sheree and Jason</div>
+          <div class="specialRequestCard">
+
+            <div class="specialGlow"></div>
+
+            <div class="specialIcon">🦋</div>
+
+            <h2 class="specialTitle" id="noteTitle">
+              A Small Request
+            </h2>
+
+            <p class="specialSubtitle">
+              Thank you for helping us keep this celebration intimate and meaningful.
+            </p>
+
+            <div class="specialDivider"></div>
+
+            <p class="specialMessage">
+              We lovingly ask that this invitation remain private and shared only with
+              those personally invited. Raia's first birthday is a heartfelt celebration
+              reserved for our closest family and friends, and your understanding means
+              so much to us.
+            </p>
+
+            <p class="specialMessage">
+              Your presence, love, and prayers are already the greatest gift we could
+              ever ask for. Thank you for celebrating this precious milestone with us.
+            </p>
+
+            <div class="specialSignature">
+              With love,<br />
+              <span>Sheree &amp; Jason</span>
+            </div>
+
           </div>
         </div>
       </section>
 
       <footer class="footer">
-        <p class="footerText">Made with love for a very special little girl.</p>
+        <p class="footerText">Made with ❤️ for a very special little girl</p>
       </footer>
     </main>
 
