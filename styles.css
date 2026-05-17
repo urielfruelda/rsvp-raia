@@ -2488,18 +2488,26 @@ textarea:focus {
 }
 
 .giftIconPair {
-  width: 92px;
-  height: 92px;
+  width: 200px;
+  height: 130px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 10px;
   align-items: center;
+  justify-items: center;
+  flex-shrink: 0;
 }
 
 .giftIconSmall {
   width: 100%;
-  height: 92px;
+  height: 130px;
+  max-width: 96px;
   object-fit: contain;
+}
+
+.giftEntry:has(.giftIconPair) {
+  grid-template-columns: 200px 1fr;
+  max-width: 380px;
 }
 
 .giftLabel {
@@ -2522,8 +2530,18 @@ textarea:focus {
 @media (max-width: 720px) {
   .giftRow    { grid-template-columns: 1fr; gap: 12px; }
   .giftEntry  { grid-template-columns: 1fr; justify-items: center; text-align: center; max-width: 420px; }
-  .giftIcon, .giftIconPair { width: 86px; height: 86px; margin-left: auto; margin-right: auto; }
-  .giftIconSmall { height: 86px; }
+  .giftIcon { width: 86px; height: 86px; margin-left: auto; margin-right: auto; }
+  .giftIconPair {
+    width: min(220px, 88vw);
+    height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .giftIconSmall {
+    height: 140px;
+    max-width: 104px;
+  }
+  .giftEntry:has(.giftIconPair) { grid-template-columns: 1fr; max-width: 420px; }
 }
 
 .healthCard {
@@ -2550,26 +2568,29 @@ textarea:focus {
 
 .healthSubtitle {
   margin: 10px auto 0;
-  max-width: 680px;
-  color: rgba(168, 40, 64, 0.82);
+  width: 100%;
+  max-width: 680px;;
   font-size: 14px;
   line-height: 1.65;
 }
 
 .healthItems {
-  margin-top: 14px;
+  margin: 30px auto 0;
   display: grid;
   gap: 14px;
+  justify-items: center;
 }
 
 .healthItem {
   display: grid;
   grid-template-columns: 56px 1fr;
   gap: 12px;
+  justify-items: start;
   align-items: center;
   text-align: left;
+  width: 100%;
   max-width: 560px;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .healthIcon {
